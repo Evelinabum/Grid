@@ -9,22 +9,23 @@ body {
     font-family: sans-serif;
 }
 .container > * {
-    border: 2px solid gold;
     padding: 2rem;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #444;
 }
 .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-columns: repeat(3, 200px);
+  /*  grid-template-columns: repeat(3, 200px);*/
     justify-content: center;
     align-content: center;
     grid-template-rows: 100px repeat(5, 300px) 150px; 
     gap: 20px;
     margin: 20px;
+    column-gap: 20px;
 
     grid-template-areas: "hd hd hd" 
     "hero hero hero"
@@ -76,4 +77,11 @@ header{
 footer{
     grid-area: footer;
 
+}
+/* paths */
+header {
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80px);
+}
+.hero {
+    clip-path: polygon(0 0, 50% 20px, 100% 0, 100% 280px, 0 100%);
 }
