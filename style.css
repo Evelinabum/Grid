@@ -79,9 +79,36 @@ footer{
 
 }
 /* paths */
+
 header {
     clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80px);
+    animation: moveDown 1s ease-in-out;
 }
 .hero {
     clip-path: polygon(0 0, 50% 20px, 100% 0, 100% 280px, 0 100%);
+}
+.s1{
+    clip-path: polygon(0 20px, 100% 13px, 100% 100%, 0% 100%);
+}
+.s2{
+    clip-path: polygon(0 13px, 100% 0, 100% 100%, 0% 100%);
+}
+.promo,
+ footer,
+ .s3, .s4,
+ .s5, .s6 {
+    margin-top: 20px;
+}
+@keyframes moveDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    80%{
+        transform: translateY(20px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
